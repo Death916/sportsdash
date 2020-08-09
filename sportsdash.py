@@ -1,5 +1,7 @@
 import sports
 import requests
+import statsapi
+import nba_api
 
 class curgames:
     
@@ -10,7 +12,11 @@ class curgames:
 
 curgames.show_games()
 
+class myTeams:
 
-
+    def Kings():
+        from nba_api.stats.static import teams
+        kings = teams.find_team_by_abbreviation('sac')
+        kingsid = kings['id']
 
 

@@ -3,7 +3,7 @@ import requests
 import statsapi
 import nba_api
 
-class curgames:
+class curGames:
     
     def show_games():
         matches = sports.all_matches()
@@ -19,4 +19,8 @@ class myTeams:
         kings = teams.find_team_by_abbreviation('sac')
         kingsid = kings['id']
 
+    def Athletics(self):
+
+        self.athletics = statsapi.lookup_team('oak')['id']
+        self.athleticsid = athletics[0]['id']
 

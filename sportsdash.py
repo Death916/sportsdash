@@ -8,8 +8,7 @@ class curGames:
     def show_games(self):
         matches = sports.all_matches()
         match_info = (matches['baseball'] + matches['basketball'])
-        print(str(match_info))
-        return
+        return str(match_info)
 
 
 
@@ -26,4 +25,6 @@ class myTeams:
         self.athleticsid = athletics[0]['id']
 
 games = curGames()
-games.show_games()
+x = games.show_games()
+for i in x.split(','):
+    print(i)
